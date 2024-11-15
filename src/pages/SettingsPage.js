@@ -1,11 +1,11 @@
 // src/pages/SettingsPage.js
 import React from 'react';
 
-function SettingsPage() {
+function SettingsPage({ onLogout }) {
   return (
     <div>
-      <h1>Settings Page</h1>
-      <p>설정 페이지입니다. 카카오 로그인을 설정할 수 있습니다.</p>
+      <h2>설정 페이지</h2>
+      <button onClick={onLogout}>로그아웃</button>
     </div>
   );
 }

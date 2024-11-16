@@ -1,8 +1,8 @@
 // Logo.js
 import React from 'react';
 
-function Logo() {
-  return <span>📍Rutravel</span>; // 예시로 텍스트 로고
+function Logo({ size = '24px' }) {
+  return <span style={{ fontSize: size, fontWeight: 'bold' }}>Rutravel</span>; 
 }
 
 export default Logo;

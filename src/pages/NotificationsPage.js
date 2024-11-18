@@ -1,13 +1,21 @@
-// src/pages/NotificationsPage.js
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-function NotificationsPage() {
+const NotificationsPage = () => {
   return (
     <div>
-      <h1>Notifications Page</h1>
-      <p>여기에서 알림을 확인할 수 있습니다.</p>
+      <Header />
+      <div className="notify">
+        <h1 style={styles.notify}>알림</h1>
+      </div>
+      <Footer />
     </div>
   );
-}
+};
+
+const styles = {
+  notify: {},
+};
 
 export default NotificationsPage;

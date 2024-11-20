@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/LoginPage.css'; // CSS 파일 가져오기
+import logo from '../assets/main-logo.png'; // 로고 이미지 경로 설정
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -22,9 +24,14 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h2>로그인 화면</h2>
-      <button onClick={handleLogin}>카카오로 로그인</button>
+    <div className="login-container">
+      {/* 로고 */}
+      <img src={logo} alt="우리 로고" className="logo" />
+
+      {/* 로그인 버튼 */}
+      <button className="kakao-login-button" onClick={handleLogin}>
+        <span className="visually-hidden">카카오로 시작하기</span>
+      </button>
     </div>
   );
 };

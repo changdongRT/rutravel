@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // useEffect 추가
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Kakao SDK 초기화
+    if (!window.Kakao.isInitialized()) {
+      window.Kakao.init('a71a6284aab775a841380046cc31a0f2'); // 여기서 YOUR_APP_KEY를 실제 JavaScript 키로 바꾸세요
+      console.log('Kakao 초기화 완료:', window.Kakao.isInitialized());
+    }
+  }, []);
 
   const handleLogin = () => {
     window.Kakao.Auth.login({

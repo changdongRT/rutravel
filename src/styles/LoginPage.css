@@ -1,0 +1,42 @@
+/* 부모 컨테이너 */
+.login-container {
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 정렬 */
+    justify-content: center; /* 세로 가운데 정렬 */
+    align-items: center; /* 가로 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    text-align: center;
+    position: relative;
+  }
+  
+  /* 로고 스타일 */
+  .logo {
+    width: 300px; /* 로고 크기 조정 */
+    margin-bottom: 20%; /* 버튼과의 간격 */
+  }
+  
+  /* 카카오 로그인 버튼 */
+  .kakao-login-button {
+    position: absolute;
+    bottom: 20%; /* 하단에서 50px 위로 */
+    background-image: url('../assets/kakao_login_medium_wide.png'); /* 버튼 이미지 경로 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px; /* 버튼 너비 */
+    height: 60px; /* 버튼 높이 */
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 스크린 리더 접근성을 위한 숨김 텍스트 */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
